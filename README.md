@@ -16,11 +16,11 @@ services:
       - "4000:4000"
     environment:
       PORT: 4000
-      DATABASE_URL: 'postgresql://magpie:magpie@db:5432/magpie'
-      SECRET_KEY_BASE: "secret"
+      DATABASE_URL: 'postgresql://magpie:magpie@db:5432/magpie?ssl=false' # user:password@host:port/database and ssl=false because we're in docker
+      SECRET_KEY_BASE: "secretsecretsecretsecretsecretsecretsecretsecretsecretsecretsecret" # at least 64 chars
       MAGPIE_NO_BASIC_AUTH: "true"
       HOST: localhost # change this to your public facing domain
-      URL_SCHEME: http
+      URL_SCHEME: http # change this to https when using it (highly recommended)
       DATABASE_SSL: 'false'
     # Ensures that the postgres service is started first.
     depends_on:
