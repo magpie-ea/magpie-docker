@@ -24,7 +24,6 @@ RUN cd assets \
 COPY app/priv priv
 
 ENV MIX_ENV="prod"
-ENV DATABASE_SSL="false"
 
 COPY app/mix.exs app/mix.lock ./
 RUN mix deps.get --only $MIX_ENV
