@@ -1,6 +1,6 @@
 # magpie-docker
 
-Current version: magpie-backend v2.0.5
+Current version: magpie-backend v2.0.6
 
 This repository contains the code for the docker image that runs [magpie-backend](https://github.com/magpie-ea/magpie-backend)
 
